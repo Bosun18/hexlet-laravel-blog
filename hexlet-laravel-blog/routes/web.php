@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,8 +23,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('about', function () use ($team) {
-    // BEGIN (write your solution here)
-    return view('about', ['team' => $team]);
-    // END
-});
+//Route::get('about', function () use ($team) {
+//    // BEGIN (write your solution here)
+//    return view('about', ['team' => $team]);
+//    // END
+//});
+
+Route::get('about', [PageController::class, 'about']);
+//Route::get('team', [PageController::class, 'team']);
