@@ -12,11 +12,11 @@
     @endif
     {{ Form::model($article, ['route' => 'articles.store']) }}
         @include('article.form')
-        {{ Form::submit('Сохранить') }}
-        {{ Form::label('name', 'Название') }}
+        {{ Form::submit('Сохранить') }}<br>
+        {{ Form::label('name', 'Название') }}<br>
         {{ Form::text('name') }}<br>
-        {{ Form::label('body', 'Содержание') }}
+        {{ Form::label('body', 'Содержание') }}<br>
         {{ Form::textarea('body') }}<br>
-        {{ Form::submit('Создать') }}
+        {{ Form::submit('Создать') }}<br>
     {{ Form::close() }}
 @endsection
